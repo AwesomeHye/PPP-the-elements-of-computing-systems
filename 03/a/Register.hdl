@@ -1,0 +1,102 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/03/a/Register.hdl
+
+/**
+ * 16-bit register:
+ * If load[t] == 1 then outt+1] = in[t]
+ * else out does not change
+ */
+
+CHIP Register {
+    IN in[16], load;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+
+    DFF(in=load, out=DFFload);
+    
+    //before options
+    DFF(in=in[0], out=DFFin0);
+    DFF(in=tout0, out=DFFout0);
+    //operate with before value and result is now 
+    Mux(a=DFFout0, b=DFFin0, sel=DFFload, out=tout0);
+    And(a=tout0, b=tout0, out=out[0]);
+
+    DFF(in=in[1], out=DFFin1);
+    DFF(in=tout1, out=DFFout1);
+    Mux(a=DFFout1, b=DFFin1, sel=DFFload, out=tout1);
+    And(a=tout1, b=tout1, out=out[1]);
+    
+    DFF(in=in[2], out=DFFin2);
+    DFF(in=tout2, out=DFFout2);
+    Mux(a=DFFout2, b=DFFin2, sel=DFFload, out=tout2);
+    And(a=tout2, b=tout2, out=out[2]);
+    
+    DFF(in=in[3], out=DFFin3);
+    DFF(in=tout3, out=DFFout3);
+    Mux(a=DFFout3, b=DFFin3, sel=DFFload, out=tout3);
+    And(a=tout3, b=tout3, out=out[3]);
+    
+    DFF(in=in[4], out=DFFin4);
+    DFF(in=tout4, out=DFFout4);
+    Mux(a=DFFout4, b=DFFin4, sel=DFFload, out=tout4);
+    And(a=tout4, b=tout4, out=out[4]);
+    
+    DFF(in=in[5], out=DFFin5);
+    DFF(in=tout5, out=DFFout5);
+    Mux(a=DFFout5, b=DFFin5, sel=DFFload, out=tout5);
+    And(a=tout5, b=tout5, out=out[5]);
+    
+    DFF(in=in[6], out=DFFin6);
+    DFF(in=tout6, out=DFFout6);
+    Mux(a=DFFout6, b=DFFin6, sel=DFFload, out=tout6);
+    And(a=tout6, b=tout6, out=out[6]);
+    
+    DFF(in=in[7], out=DFFin7);
+    DFF(in=tout7, out=DFFout7);
+    Mux(a=DFFout7, b=DFFin7, sel=DFFload, out=tout7);
+    And(a=tout7, b=tout7, out=out[7]);
+    
+    DFF(in=in[8], out=DFFin8);
+    DFF(in=tout8, out=DFFout8);
+    Mux(a=DFFout8, b=DFFin8, sel=DFFload, out=tout8);
+    And(a=tout8, b=tout8, out=out[8]);
+    
+    DFF(in=in[9], out=DFFin9);
+    DFF(in=tout9, out=DFFout9);
+    Mux(a=DFFout9, b=DFFin9, sel=DFFload, out=tout9);
+    And(a=tout9, b=tout9, out=out[9]);
+    
+    DFF(in=in[10], out=DFFin10);
+    DFF(in=tout10, out=DFFout10);
+    Mux(a=DFFout10, b=DFFin10, sel=DFFload, out=tout10);
+    And(a=tout10, b=tout10, out=out[10]);
+    
+    DFF(in=in[11], out=DFFin11);
+    DFF(in=tout11, out=DFFout11);
+    Mux(a=DFFout11, b=DFFin11, sel=DFFload, out=tout11);
+    And(a=tout11, b=tout11, out=out[11]);
+    
+    DFF(in=in[12], out=DFFin12);
+    DFF(in=tout12, out=DFFout12);
+    Mux(a=DFFout12, b=DFFin12, sel=DFFload, out=tout12);
+    And(a=tout12, b=tout12, out=out[12]);
+    
+    DFF(in=in[13], out=DFFin13);
+    DFF(in=tout13, out=DFFout13);
+    Mux(a=DFFout13, b=DFFin13, sel=DFFload, out=tout13);
+    And(a=tout13, b=tout13, out=out[13]);
+    
+    DFF(in=in[14], out=DFFin14);
+    DFF(in=tout14, out=DFFout14);
+    Mux(a=DFFout14, b=DFFin14, sel=DFFload, out=tout14);
+    And(a=tout14, b=tout14, out=out[14]);
+ 
+    DFF(in=in[15], out=DFFin15);
+    DFF(in=tout15, out=DFFout15);
+    Mux(a=DFFout15, b=DFFin15, sel=DFFload, out=tout15);
+    And(a=tout15, b=tout15, out=out[15]);
+}

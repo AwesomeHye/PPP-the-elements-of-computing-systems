@@ -1,0 +1,150 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Mux16.hdl
+
+/**
+ * 16-bit multiplexor: 
+ * for i = 0..15 out[i] = a[i] if sel == 0 
+ *                        b[i] if sel == 1
+ */
+
+CHIP Mux16 {
+    IN a[16], b[16], sel;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here: //~sel
+    Nand(a=sel, b=sel, out=notsel);
+
+    Nand(a=notsel, b=a[0], out=nandnotselanda0);
+    Nand(a=nandnotselanda0, b=nandnotselanda0, out=notselanda0);
+    Nand(a=sel, b=b[0], out=nandselandb0);
+    Nand(a=nandselandb0, b=nandselandb0, out=selandb0);
+    Nand(a=notselanda0, b=notselanda0, out=notnotselanda0);
+    Nand(a=selandb0, b=selandb0, out=notselandb0);
+    Nand(a=notnotselanda0, b=notselandb0, out=out[0]);
+    
+    Nand(a=notsel, b=a[1], out=nandnotselanda1);
+    Nand(a=nandnotselanda1, b=nandnotselanda1, out=notselanda1);
+    Nand(a=sel, b=b[1], out=nandselandb1);
+    Nand(a=nandselandb1, b=nandselandb1, out=selandb1);
+    Nand(a=notselanda1, b=notselanda1, out=notnotselanda1);
+    Nand(a=selandb1, b=selandb1, out=notselandb1);
+    Nand(a=notnotselanda1, b=notselandb1, out=out[1]);
+    
+    Nand(a=notsel, b=a[2], out=nandnotselanda2);
+    Nand(a=nandnotselanda2, b=nandnotselanda2, out=notselanda2);
+    Nand(a=sel, b=b[2], out=nandselandb2);
+    Nand(a=nandselandb2, b=nandselandb2, out=selandb2);
+    Nand(a=notselanda2, b=notselanda2, out=notnotselanda2);
+    Nand(a=selandb2, b=selandb2, out=notselandb2);
+    Nand(a=notnotselanda2, b=notselandb2, out=out[2]);
+    
+    Nand(a=notsel, b=a[3], out=nandnotselanda3);
+    Nand(a=nandnotselanda3, b=nandnotselanda3, out=notselanda3);
+    Nand(a=sel, b=b[3], out=nandselandb3);
+    Nand(a=nandselandb3, b=nandselandb3, out=selandb3);
+    Nand(a=notselanda3, b=notselanda3, out=notnotselanda3);
+    Nand(a=selandb3, b=selandb3, out=notselandb3);
+    Nand(a=notnotselanda3, b=notselandb3, out=out[3]);
+    
+    Nand(a=notsel, b=a[4], out=nandnotselanda4);
+    Nand(a=nandnotselanda4, b=nandnotselanda4, out=notselanda4);
+    Nand(a=sel, b=b[4], out=nandselandb4);
+    Nand(a=nandselandb4, b=nandselandb4, out=selandb4);
+    Nand(a=notselanda4, b=notselanda4, out=notnotselanda4);
+    Nand(a=selandb4, b=selandb4, out=notselandb4);
+    Nand(a=notnotselanda4, b=notselandb4, out=out[4]);
+    
+    Nand(a=notsel, b=a[5], out=nandnotselanda5);
+    Nand(a=nandnotselanda5, b=nandnotselanda5, out=notselanda5);
+    Nand(a=sel, b=b[5], out=nandselandb5);
+    Nand(a=nandselandb5, b=nandselandb5, out=selandb5);
+    Nand(a=notselanda5, b=notselanda5, out=notnotselanda5);
+    Nand(a=selandb5, b=selandb5, out=notselandb5);
+    Nand(a=notnotselanda5, b=notselandb5, out=out[5]);
+    
+    Nand(a=notsel, b=a[6], out=nandnotselanda6);
+    Nand(a=nandnotselanda6, b=nandnotselanda6, out=notselanda6);
+    Nand(a=sel, b=b[6], out=nandselandb6);
+    Nand(a=nandselandb6, b=nandselandb6, out=selandb6);
+    Nand(a=notselanda6, b=notselanda6, out=notnotselanda6);
+    Nand(a=selandb6, b=selandb6, out=notselandb6);
+    Nand(a=notnotselanda6, b=notselandb6, out=out[6]);
+    
+    Nand(a=notsel, b=a[7], out=nandnotselanda7);
+    Nand(a=nandnotselanda7, b=nandnotselanda7, out=notselanda7);
+    Nand(a=sel, b=b[7], out=nandselandb7);
+    Nand(a=nandselandb7, b=nandselandb7, out=selandb7);
+    Nand(a=notselanda7, b=notselanda7, out=notnotselanda7);
+    Nand(a=selandb7, b=selandb7, out=notselandb7);
+    Nand(a=notnotselanda7, b=notselandb7, out=out[7]);
+    
+    Nand(a=notsel, b=a[8], out=nandnotselanda8);
+    Nand(a=nandnotselanda8, b=nandnotselanda8, out=notselanda8);
+    Nand(a=sel, b=b[8], out=nandselandb8);
+    Nand(a=nandselandb8, b=nandselandb8, out=selandb8);
+    Nand(a=notselanda8, b=notselanda8, out=notnotselanda8);
+    Nand(a=selandb8, b=selandb8, out=notselandb8);
+    Nand(a=notnotselanda8, b=notselandb8, out=out[8]);
+    
+    Nand(a=notsel, b=a[9], out=nandnotselanda9);
+    Nand(a=nandnotselanda9, b=nandnotselanda9, out=notselanda9);
+    Nand(a=sel, b=b[9], out=nandselandb9);
+    Nand(a=nandselandb9, b=nandselandb9, out=selandb9);
+    Nand(a=notselanda9, b=notselanda9, out=notnotselanda9);
+    Nand(a=selandb9, b=selandb9, out=notselandb9);
+    Nand(a=notnotselanda9, b=notselandb9, out=out[9]);
+    
+    Nand(a=notsel, b=a[10], out=nandnotselanda10);
+    Nand(a=nandnotselanda10, b=nandnotselanda10, out=notselanda10);
+    Nand(a=sel, b=b[10], out=nandselandb10);
+    Nand(a=nandselandb10, b=nandselandb10, out=selandb10);
+    Nand(a=notselanda10, b=notselanda10, out=notnotselanda10);
+    Nand(a=selandb10, b=selandb10, out=notselandb10);
+    Nand(a=notnotselanda10, b=notselandb10, out=out[10]);
+    
+    Nand(a=notsel, b=a[11], out=nandnotselanda11);
+    Nand(a=nandnotselanda11, b=nandnotselanda11, out=notselanda11);
+    Nand(a=sel, b=b[11], out=nandselandb11);
+    Nand(a=nandselandb11, b=nandselandb11, out=selandb11);
+    Nand(a=notselanda11, b=notselanda11, out=notnotselanda11);
+    Nand(a=selandb11, b=selandb11, out=notselandb11);
+    Nand(a=notnotselanda11, b=notselandb11, out=out[11]);
+
+    Nand(a=notsel, b=a[12], out=nandnotselanda12);
+    Nand(a=nandnotselanda12, b=nandnotselanda12, out=notselanda12);
+    Nand(a=sel, b=b[12], out=nandselandb12);
+    Nand(a=nandselandb12, b=nandselandb12, out=selandb12);
+    Nand(a=notselanda12, b=notselanda12, out=notnotselanda12);
+    Nand(a=selandb12, b=selandb12, out=notselandb12);
+    Nand(a=notnotselanda12, b=notselandb12, out=out[12]);
+
+    Nand(a=notsel, b=a[13], out=nandnotselanda13);
+    Nand(a=nandnotselanda13, b=nandnotselanda13, out=notselanda13);
+    Nand(a=sel, b=b[13], out=nandselandb13);
+    Nand(a=nandselandb13, b=nandselandb13, out=selandb13);
+    Nand(a=notselanda13, b=notselanda13, out=notnotselanda13);
+    Nand(a=selandb13, b=selandb13, out=notselandb13);
+    Nand(a=notnotselanda13, b=notselandb13, out=out[13]);
+
+    Nand(a=notsel, b=a[14], out=nandnotselanda14);
+    Nand(a=nandnotselanda14, b=nandnotselanda14, out=notselanda14);
+    Nand(a=sel, b=b[14], out=nandselandb14);
+    Nand(a=nandselandb14, b=nandselandb14, out=selandb14);
+    Nand(a=notselanda14, b=notselanda14, out=notnotselanda14);
+    Nand(a=selandb14, b=selandb14, out=notselandb14);
+    Nand(a=notnotselanda14, b=notselandb14, out=out[14]);
+
+    Nand(a=notsel, b=a[15], out=nandnotselanda15);
+    Nand(a=nandnotselanda15, b=nandnotselanda15, out=notselanda15);
+    Nand(a=sel, b=b[15], out=nandselandb15);
+    Nand(a=nandselandb15, b=nandselandb15, out=selandb15);
+    Nand(a=notselanda15, b=notselanda15, out=notnotselanda15);
+    Nand(a=selandb15, b=selandb15, out=notselandb15);
+    Nand(a=notnotselanda15, b=notselandb15, out=out[15]);
+
+
+
+}

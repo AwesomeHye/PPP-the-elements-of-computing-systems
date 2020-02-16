@@ -1,0 +1,109 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * Adds two 16-bit values.
+ * The most significant carry bit is ignored.
+ */
+
+CHIP Add16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+   // Put you code here:
+    And(a=a[0], b=b[0], out=carry0);
+    Xor(a=a[0], b=b[0], out=out[0]);
+    
+    And(a=a[1], b=b[1], out=andab1);
+    Xor(a=a[1], b=b[1], out=sum1);
+    And(a=sum1, b=carry0, out=ands1);
+    Or(a=ands1, b=andab1, out=carry1);
+    Xor(a=sum1, b=carry0, out=out[1]);
+
+    And(a=a[2], b=b[2], out=andab2);
+    Xor(a=a[2], b=b[2], out=sum2);
+    And(a=sum2, b=carry1, out=ands2);
+    Or(a=ands2, b=andab2, out=carry2);
+    Xor(a=sum2, b=carry1, out=out[2]);
+
+    And(a=a[3], b=b[3], out=andab3);
+    Xor(a=a[3], b=b[3], out=sum3);
+    And(a=sum3, b=carry2, out=ands3);
+    Or(a=ands3, b=andab3, out=carry3);
+    Xor(a=sum3, b=carry2, out=out[3]);
+
+    And(a=a[4], b=b[4], out=andab4);
+    Xor(a=a[4], b=b[4], out=sum4);
+    And(a=sum4, b=carry3, out=ands4);
+    Or(a=ands4, b=andab4, out=carry4);
+    Xor(a=sum4, b=carry3, out=out[4]);
+
+    And(a=a[5], b=b[5]], out=andab5);
+    Xor(a=a[5], b=b[5], out=sum5);
+    And(a=sum5, b=carry4, out=ands5);
+    Or(a=ands5, b=andab5, out=carry5);
+    Xor(a=sum5, b=carry4, out=out[5]);
+
+    And(a=a[6], b=b[6], out=andab6);
+    Xor(a=a[6], b=b[6], out=sum6);
+    And(a=sum6, b=carry5, out=ands6);
+    Or(a=ands6, b=andab6, out=carry6);
+    Xor(a=sum6, b=carry5, out=out[6]);
+
+    And(a=a[7], b=b[7], out=andab7);
+    Xor(a=a[7], b=b[7], out=sum7);
+    And(a=sum7, b=carry6, out=ands7);
+    Or(a=ands7, b=andab7, out=carry7);
+    Xor(a=sum7, b=carry6, out=out[7]);
+    
+    And(a=a[8], b=b[8], out=andab8);
+    Xor(a=a[8], b=b[8], out=sum8);
+    And(a=sum8, b=carry7, out=ands8);
+    Or(a=ands8, b=andab8, out=carry8);
+    Xor(a=sum8, b=carry7, out=out[8]);
+       
+    And(a=a[9], b=b[9], out=andab9);
+    Xor(a=a[9], b=b[9], out=sum9);
+    And(a=sum9, b=carry8, out=ands9);
+    Or(a=ands9, b=andab9, out=carry9);
+    Xor(a=sum9, b=carry8, out=out[9]);
+       
+    And(a=a[10], b=b[10], out=andab10);
+    Xor(a=a[10], b=b[10], out=sum10);
+    And(a=sum10, b=carry9, out=ands10);
+    Or(a=ands10, b=andab10, out=carry10);
+    Xor(a=sum10, b=carry9, out=out[10]);
+       
+    And(a=a[11], b=b[11], out=andab11);
+    Xor(a=a[11], b=b[11], out=sum11);
+    And(a=sum11, b=carry10, out=ands11);
+    Or(a=ands11, b=andab11, out=carry11);
+    Xor(a=sum11, b=carry10, out=out[11]);
+       
+    And(a=a[12], b=b[12], out=andab12);
+    Xor(a=a[12], b=b[12], out=sum12);
+    And(a=sum12, b=carry11, out=ands12);
+    Or(a=ands12, b=andab12, out=carry12);
+    Xor(a=sum12, b=carry11, out=out[12]);
+       
+    And(a=a[13], b=b[13], out=andab13);
+    Xor(a=a[13], b=b[13], out=sum13);
+    And(a=sum13, b=carry12, out=ands13);
+    Or(a=ands13, b=andab13, out=carry13);
+    Xor(a=sum13, b=carry12, out=out[13]);
+       
+    And(a=a[14], b=b[14], out=andab14);
+    Xor(a=a[14], b=b[14], out=sum14);
+    And(a=sum14, b=carry13, out=ands14);
+    Or(a=ands14, b=andab14, out=carry14);
+    Xor(a=sum14, b=carry13, out=out[14]);
+       
+    And(a=a[15], b=b[15], out=andab15);
+    Xor(a=a[15], b=b[15], out=sum15);
+    And(a=sum15, b=carry14, out=ands15);
+    Or(a=ands15, b=andab15, out=carry15);
+    Xor(a=sum15, b=carry14, out=out[15]);
+}
