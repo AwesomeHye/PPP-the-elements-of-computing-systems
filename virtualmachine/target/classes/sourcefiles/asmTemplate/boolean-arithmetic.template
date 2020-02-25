@@ -1,0 +1,32 @@
+//// {op} ////
+//pop & SP-=1
+@SP
+A=M-1
+D=M
+@SP
+M=M-1
+//D=a{SYM}b
+@SP
+A=M-1
+D=M{SYM}D
+//if D {CMP_SYM} 0, TRUE. GOTO line+=18
+@{TRUE_LINE}
+D;{JUMP}
+//FALSE 
+//set 0
+@0
+D=A
+//update 0
+@SP
+A=M-1
+M=D
+//GOTO line+=23
+@{END}
+0;JMP
+//line {TRUE_LINE}. TRUE
+//set -1(0xFFFF)
+D=-1
+//update -1
+@SP
+A=M-1
+M=D

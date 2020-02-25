@@ -1,0 +1,19 @@
+//// PUSH {SEGMENT} {INDEX} ////
+//change {ADDR}[i] TO {ADDR}[i+{INDEX}]
+@{INDEX}
+D=A
+@{ADDR}
+M=M+D
+A=M
+D=M
+//update {INDEX} & SP+=1
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//change {ADDR}[i+{INDEX}] TO {ADDR}[i]
+@{INDEX}
+D=A
+@{ADDR}
+M=M-D

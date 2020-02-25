@@ -1,0 +1,10 @@
+//// PUSH STATIC {INDEX} ////
+//get value from variable {FILE_NAME}.{INDEX}
+@{FILE_NAME}.{INDEX}
+D=M
+//update {INDEX} & SP+=1
+@SP
+A=M
+M=D
+@SP
+M=M+1

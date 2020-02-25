@@ -1,0 +1,19 @@
+//// POP TEMP {INDEX} ////
+//set R[13] to temp address. R[13] = 5+{INDEX}
+@{INDEX}
+D=A
+@R5
+D=D+A
+@R13
+M=D
+//get value from stack
+@SP
+A=M-1
+D=M
+//SP-=1
+@SP
+M=M-1
+//put temp {INDEX}
+@R13
+A=M
+M=D

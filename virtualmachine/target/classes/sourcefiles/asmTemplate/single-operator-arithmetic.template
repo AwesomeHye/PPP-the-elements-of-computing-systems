@@ -1,0 +1,6 @@
+//// {op} ////
+//update 
+@SP
+A=M-1
+D={SYM}M
+M=D

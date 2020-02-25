@@ -1,0 +1,21 @@
+//// POP {SEGMENT} {INDEX} ////
+//change {ADDR}[i] TO {ADDR}[i+{INDEX}]
+@{INDEX}
+D=A
+@{ADDR}
+A=A+D
+//get value from stack
+@SP
+A=M-1
+D=M
+//SP-=1
+@SP
+M=M-1
+//put local[LCL+{INDEX}] value
+@{ADDR}
+M=D
+//change {ADDR}[i+{INDEX}] TO {ADDR}[i]
+@{INDEX}
+D=A
+@{ADDR}
+A=A-D

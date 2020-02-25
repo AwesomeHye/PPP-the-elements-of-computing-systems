@@ -77,7 +77,7 @@ public class AssemblerWithSymbolTest {
 
         try {
             //read assembly
-            assembly.set(refineAssembly(path));
+            assembly.set(Files.readAllLines(path));
 
             //translate assemblyIterator to binary code
             binaryCode.set(coreAssembler.translate(assembly.get()));
@@ -89,28 +89,12 @@ public class AssemblerWithSymbolTest {
 
             //write binary code
             Files.deleteIfExists(filePath.get());
-            Files.createDirectories(filePath.get().getParent());;
+            Files.createDirectories(filePath.get().getParent());
             Files.write(filePath.get(), binaryCode.get(), StandardOpenOption.CREATE_NEW);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    //공백제거, 주석 제거, 빈 줄 제거
-    private List<String> refineAssembly(Path assemblyPath){
-        List<String> refindAssembly = new ArrayList<>();
-        try {
-            List<String> assembly = Files.readAllLines(assemblyPath);
-            refindAssembly = assembly.stream()
-                    .map(line -> line.replace(" ", "").replaceFirst("//.*", ""))
-                    .filter(StringUtils::isNotEmpty)
-                    .collect(Collectors.toList());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return refindAssembly;
     }
 
 }

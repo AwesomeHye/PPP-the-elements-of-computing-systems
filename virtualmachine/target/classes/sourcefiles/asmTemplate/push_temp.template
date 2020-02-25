@@ -1,0 +1,13 @@
+//// PUSH TEMP {INDEX} ////
+//get temp address
+@{INDEX}
+D=A
+@{ADDR}
+A=D+A
+D=M
+//update {INDEX} & SP+=1
+@SP
+A=M
+M=D
+@SP
+M=M+1

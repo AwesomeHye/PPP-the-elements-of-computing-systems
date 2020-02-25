@@ -1,0 +1,11 @@
+//// POP STATIC {INDEX} ////
+//get value from stack
+@SP
+A=M-1
+D=M
+//SP-=1
+@SP
+M=M-1
+//set value to variable {FILE_NAME}.{INDEX}
+@{FILE_NAME}.{INDEX}
+M=D

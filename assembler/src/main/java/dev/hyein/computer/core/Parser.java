@@ -3,8 +3,10 @@ package dev.hyein.computer.core;
 import dev.hyein.computer.type.CommandType;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * PARSE hack assembly
@@ -20,10 +22,14 @@ public class Parser {
 
     /**
      *
-     * @param assembly D=M+D | @15
+     * @param rawAssembly D = M + D
+     *                    @15
+     *                    // D=M
      * @return commandType:C_COMMAND, dest:D, comp:M+D | commandType:A_COMMAND, symbol:15
      */
-    public List<Map<String, String>> parse(List<String> assembly){
+    public List<Map<String, String>> parse(List<String> rawAssembly){
+        List<String> assembly = refineAssembly(rawAssembly);
+
         assemblyIterator = assembly.iterator();
 
         while(hasMoreCommands()){
@@ -47,6 +53,14 @@ public class Parser {
         }
 
         return parsedAssembly;
+    }
+
+    //공백제거, 주석 제거, 빈 줄 제거
+    private List<String> refineAssembly(List<String> rawAssembly) {
+        return  rawAssembly.stream()
+                .map(line -> line.replace(" ", "").replaceFirst("//.*", ""))
+                .filter(StringUtils::isNotEmpty)
+                .collect(Collectors.toList());
     }
 
     private boolean hasMoreCommands(){

@@ -1,0 +1,12 @@
+//// POP POINTER {INDEX} ////
+//get value from stack
+@SP
+A=M-1
+D=M
+//SP-=1
+@SP
+M=M-1
+//set value to THIS(POINTER 0) OR THAT(POINTER 1)
+@THIS
+A=A{SYM_INDEX}
+M=D

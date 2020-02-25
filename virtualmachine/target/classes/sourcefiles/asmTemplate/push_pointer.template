@@ -1,0 +1,11 @@
+//// PUSH POINTER {INDEX} ////
+//get value from THIS(POINTER 0) OR THAT(POINTER 1)
+@THIS
+A=A{SYM_INDEX}
+D=M
+//update {INDEX} & SP+=1
+@SP
+A=M
+M=D
+@SP
+M=M+1
