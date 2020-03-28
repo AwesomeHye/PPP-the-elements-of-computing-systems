@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdb1861f-9fc1-4426-ba93-777c46f34b40" name="Default Changelist" comment="update jackcompiler">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/engine/CompilationEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enumm/KeywordType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enumm/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ArrayTest/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ArrayTest/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ArrayTest/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/ExpressionLessSquare/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jack/Square/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/AnalyzerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/JAXPTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/engine/CompilationEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/enumm/KeywordType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/enumm/TokenType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ArrayTest/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ArrayTest/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ArrayTest/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ArrayTest/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/output/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/ExpressionLessSquare/output/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/output/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jack/Square/output/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/tokenizer/JackTokenizer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/tokenizer/JackTokenizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/AnalyzerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/JAXPTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/StringTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElementVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/Main.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCallStack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCallVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunctionVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Class1.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Class2.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTestVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoopVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeriesVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/bootstrap.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/call.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/function.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/goto.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/if-goto.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/label.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/return.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assembler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../assembler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AnalyzerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="742">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/engine/CompilationEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="244" column="5" lean-forward="true" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
+                <element signature="method#getRefinedJackCode#0;class#JackTokenizer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/JAXPTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="57" column="58" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="57" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/Element.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="470" column="16" selection-start-line="470" selection-start-column="16" selection-end-line="470" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/NodeList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/enumm/KeywordType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/enumm/TokenType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="94" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tokens</find>
+      <find>spli</find>
+      <find>A-Z</find>
+      <find>String</find>
+      <find>$PROJECT_DIR$</find>
+      <find>int</find>
+      <find>te</find>
+      <find>xmlDocument</find>
+      <find>term</find>
+      <find>ter</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/jxm/ClassRoot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/Terminal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/RootClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/terminal/IntegerConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/terminal/StringConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/DoStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/Expression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/ExpressionList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/IfStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/LetStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/ParameterList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/ReturnStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/Statements.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/SubroutineBody.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/SubroutineDec.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/Term.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/VarDec.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/WhileStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/terminal/Keyword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/terminal/Identifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/terminal/Symbol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/RootClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/ClassVarDec.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MarshalTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DomParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jxm/non_terminal/Tokens.java" />
+        <option value="$PROJECT_DIR$/src/main/java/enumm/KeywordType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/enumm/TokenType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/StringTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizerFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AnalyzerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JAXPTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/engine/CompilationEngine.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-404" />
+    <option name="y" value="98" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="enumm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tokenizer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jackcompiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jackcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585367089499" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.JAXPTest.readXml">
+    <configuration name="AnalyzerTest.tokenize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jack-compiler" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AnalyzerTest" />
+      <option name="METHOD_NAME" value="tokenize" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JAXPTest.dom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jackcompiler" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JAXPTest" />
+      <option name="METHOD_NAME" value="dom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JAXPTest.readXml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jack-compiler" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JAXPTest" />
+      <option name="METHOD_NAME" value="readXml" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTest.countMatcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jack-compiler" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringTest" />
+      <option name="METHOD_NAME" value="countMatcher" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTest.ignoreCapital" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jackcompiler" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringTest" />
+      <option name="METHOD_NAME" value="ignoreCapital" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="jackcompiler" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="jackcompiler" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.JAXPTest.dom" />
+      <item itemvalue="JUnit.StringTest.countMatcher" />
+      <item itemvalue="JUnit.StringTest.ignoreCapital" />
+      <item itemvalue="JUnit.AnalyzerTest.tokenize" />
+      <item itemvalue="JUnit.JAXPTest.readXml" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JAXPTest.readXml" />
+        <item itemvalue="JUnit.AnalyzerTest.tokenize" />
+        <item itemvalue="JUnit.StringTest.countMatcher" />
+        <item itemvalue="JUnit.JAXPTest.dom" />
+        <item itemvalue="JUnit.StringTest.ignoreCapital" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdb1861f-9fc1-4426-ba93-777c46f34b40" name="Default Changelist" comment="" />
+      <created>1583846225236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583846225236</updated>
+      <workItem from="1583846228593" duration="2722000" />
+      <workItem from="1583972981665" duration="22963000" />
+      <workItem from="1584317533784" duration="26084000" />
+      <workItem from="1584753559418" duration="13039000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 35m 39s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 37m 14s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 38m 08s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 38m 51s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 39m 52s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 40m 38s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 46m 35s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 51m 10s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 51m 28s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JAXPTest_readXml - 2020.03.21 at 12h 51m 43s.xml">
+      <configuration name="JAXPTest.readXml" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="64808000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22068231" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33188722" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36008677" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/JAXPTest.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizer.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="matcher" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/ExpressionList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/IfStatement.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/LetStatement.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/ParameterList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/ReturnStatement.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/Statements.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/SubroutineBody.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/SubroutineDec.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/VarDec.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/WhileStatement.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/terminal/IntegerConstant.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/terminal/Keyword.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/terminal/Symbol.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/terminal/StringConstant.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/terminal/Identifier.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/Term.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/RootClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/ClassVarDec.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/parsers/DocumentBuilderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jxm/non_terminal/Tokens.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/TransformerConfigurationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/OutputKeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5149">
+          <caret line="294" column="32" selection-start-line="294" selection-start-column="32" selection-end-line="294" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15143">
+          <caret line="901" selection-start-line="901" selection-end-line="901" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/stream/StreamResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+          <folding>
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/regex/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="621" column="19" selection-start-line="621" selection-start-column="19" selection-end-line="621" selection-end-column="19" />
+          <folding>
+            <element signature="e#21591#21592#0" expanded="true" />
+            <element signature="e#21636#21637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="2119" column="19" selection-start-line="2119" selection-start-column="19" selection-end-line="2119" selection-end-column="19" />
+          <folding>
+            <element signature="e#23072#23073#0" expanded="true" />
+            <element signature="e#23112#23113#0" expanded="true" />
+            <element signature="e#82616#82617#0" expanded="true" />
+            <element signature="e#82667#82668#0" expanded="true" />
+            <element signature="e#82971#82972#0" expanded="true" />
+            <element signature="e#83020#83021#0" expanded="true" />
+            <element signature="e#94598#94599#0" expanded="true" />
+            <element signature="e#94636#94637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="302" column="19" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
+          <folding>
+            <element signature="e#6283#6284#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+            <element signature="e#11079#11080#0" expanded="true" />
+            <element signature="e#11117#11118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="112" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23598">
+          <caret line="1289" column="25" selection-start-line="1289" selection-start-column="25" selection-end-line="1289" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13300">
+          <caret line="700" column="37" selection-start-line="700" selection-start-column="37" selection-end-line="700" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/StringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/sax/SAXResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/xml/transform/TransformerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1362">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#142#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/NodeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enumm/KeywordType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enumm/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="94" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tokenizer/JackTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="244" column="5" lean-forward="true" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="method#getRefinedJackCode#0;class#JackTokenizer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="470" column="16" selection-start-line="470" selection-start-column="16" selection-end-line="470" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="663" column="73" lean-forward="true" selection-start-line="663" selection-start-column="73" selection-end-line="663" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/org/w3c/dom/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JAXPTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="57" column="58" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="57" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/engine/CompilationEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jack-compiler</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

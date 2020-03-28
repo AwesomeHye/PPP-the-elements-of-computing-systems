@@ -2,28 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08389f5f-2d88-40a7-8c44-b8f5e105a492" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/java/engine/CompilationEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/java/enumm/KeywordType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/java/enumm/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/java/tokenizer/JackTokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ArrayTest/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ArrayTest/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ArrayTest/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/ExpressionLessSquare/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/main/resources/jack/Square/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/test/java/AnalyzerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/test/java/JAXPTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/src/test/java/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/engine/CompilationEngine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/enumm/KeywordType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/enumm/TokenType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ArrayTest/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ArrayTest/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ArrayTest/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ArrayTest/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/output/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/ExpressionLessSquare/output/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/Main.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/Main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/Square.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/Square.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/SquareGame.jack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/SquareGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/output/MainT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/output/SquareGameT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/jack/Square/output/SquareT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/tokenizer/JackTokenizer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/classes/tokenizer/JackTokenizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/test-classes/AnalyzerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/test-classes/JAXPTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jackcompiler/target/test-classes/StringTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElement.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/FibonacciElementVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/Main.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/FibonacciElement/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCall.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCallStack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/NestedCallVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/NestedCall/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunction.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/SimpleFunction/SimpleFunctionVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Class1.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Class2.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTest.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/StaticsTestVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/FunctionCalls/StaticsTest/Sys.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoop.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/BasicLoop/BasicLoopVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.cmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeries.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/ProgramFlow/FibonacciSeries/FibonacciSeriesVME.tst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/bootstrap.asm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/call.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/function.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/goto.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/if-goto.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/label.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/return.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/Assembler/Assembler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/Assembler/Assembler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/hyein/computer/AssemblerWithSymbolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/hyein/computer/AssemblerWithSymbolTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtual-machine/src/main/java/dev/hyein/computer/virtualmachine/parser/VmParser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/parser/IntermediateCodeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/parser/IntermediateCodeParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/translator/VmTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/translator/VmTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/writer/CodeWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/writer/CodeWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.out" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/boolean-arithmetic.template" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/boolean-arithmetic.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/pop - 복사본.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/translator/VmTranslator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/translator/VmTranslator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

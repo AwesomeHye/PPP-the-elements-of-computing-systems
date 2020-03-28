@@ -1,0 +1,3 @@
+//// GOTO {LABEL} ////
+@{FUNC_NAME}${LABEL}
+0;JMP

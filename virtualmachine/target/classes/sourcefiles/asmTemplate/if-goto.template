@@ -1,0 +1,11 @@
+//// IF-GOTO {LABEL} ////
+//get value from stack
+@SP
+A=M-1
+D=M
+//pop
+@SP
+M=M-1
+//goto {FUNC_NAME}${LABEL} if value is not zero
+@{FUNC_NAME}${LABEL}
+D;JNE

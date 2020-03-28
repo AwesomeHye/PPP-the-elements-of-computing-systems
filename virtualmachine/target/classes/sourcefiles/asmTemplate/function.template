@@ -1,0 +1,21 @@
+//// FUNCTION {FUNC_NAME} {LCL_NUM} ////
+({FUNC_NAME})
+@0
+D=A
+//initialize local variable size to 0
+({FUNC_NAME}$LOOP)
+@{LCL_NUM}
+D=A-D
+@{FUNC_NAME}$END
+D;JEQ
+//get LCL index
+@{LCL_NUM}
+D=A-D
+@LCL
+A=M+D
+M=0
+//i+=1
+D=D+1
+@{FUNC_NAME}$LOOP
+0;JMP
+({FUNC_NAME}$END)
