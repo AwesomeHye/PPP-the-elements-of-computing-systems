@@ -2,22 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08389f5f-2d88-40a7-8c44-b8f5e105a492" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/parser/IntermediateCodeParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/translator/VmTranslator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/type/CommandType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/writer/CodeWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/test/java/UnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../virtualmachine/src/test/java/VmTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Code$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Code$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Code.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Code.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Parser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Parser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/core/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/hyein/computer/Assembler/Assembler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/hyein/computer/Assembler/Assembler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/dev/hyein/computer/AssemblerWithSymbolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/hyein/computer/AssemblerWithSymbolTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtual-machine/src/main/java/dev/hyein/computer/virtualmachine/parser/VmParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/parser/IntermediateCodeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/parser/IntermediateCodeParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/translator/VmTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/translator/VmTranslator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/src/main/java/writer/CodeWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/src/main/java/writer/CodeWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/MainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/parser/IntermediateCodeParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.out" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/StackArithmetic/StackTest/StackTest.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/boolean-arithmetic.template" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/boolean-arithmetic.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/sourcefiles/asmTemplate/pop - 복사본.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/translator/VmTranslator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/translator/VmTranslator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../virtualmachine/target/classes/writer/CodeWriter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,27 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1406">
-              <caret line="91" column="64" selection-start-line="89" selection-start-column="9" selection-end-line="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/nio/file/Files.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63042">
-              <caret line="3403" column="77" selection-start-line="3403" selection-start-column="77" selection-end-line="3403" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/CoreAssembler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +62,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Code.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="1672">
+              <caret line="96" column="93" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/SymbolTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +96,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="364">
+              <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="1539">
+              <caret line="91" column="37" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,6 +160,7 @@
     <findStrings>
       <find>util</find>
       <find>ashMap</find>
+      <find>JNE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,14 +178,14 @@
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/AssemblerWithSymbol.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/CoreAssemblerWithSymbol.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/SymbolTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/CoreAssembler.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Code.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/type/CommandType.java" />
         <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Parser.java" />
         <option value="$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java" />
       </list>
     </option>
   </component>
@@ -203,8 +213,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1047" />
+    <option name="x" value="-404" />
+    <option name="y" value="98" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,8 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,21 +293,6 @@
               <item name="assembler" type="b2602c69:ProjectViewProjectNode" />
               <item name="assembler" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assembler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assembler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="asm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assembler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assembler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -323,12 +318,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582450534680" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583930287634" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../virtual-machine" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -349,7 +346,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AssemblerWithSymbolTest.assembler">
+  <component name="RunManager" selected="JUnit.UnitTest.getResourcePath">
     <configuration name="AssemblerWithSymbolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assembler" />
       <extension name="coverage">
@@ -398,7 +395,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnitTest.issNumeric" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTest.getResourcePath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assembler" />
       <extension name="coverage">
         <pattern>
@@ -408,7 +405,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="dev.hyein.computer" />
       <option name="MAIN_CLASS_NAME" value="dev.hyein.computer.UnitTest" />
-      <option name="METHOD_NAME" value="issNumeric" />
+      <option name="METHOD_NAME" value="getResourcePath" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -433,17 +430,17 @@
     <list>
       <item itemvalue="JUnit.AssemblerWithSymbolTest.coreAssembler" />
       <item itemvalue="JUnit.AssemblerWithSymbolTest" />
-      <item itemvalue="JUnit.UnitTest.issNumeric" />
       <item itemvalue="JUnit.UnitTest.lpad" />
       <item itemvalue="JUnit.AssemblerWithSymbolTest.assembler" />
+      <item itemvalue="JUnit.UnitTest.getResourcePath" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UnitTest.getResourcePath" />
         <item itemvalue="JUnit.AssemblerWithSymbolTest.assembler" />
         <item itemvalue="JUnit.AssemblerWithSymbolTest" />
         <item itemvalue="JUnit.AssemblerWithSymbolTest.coreAssembler" />
         <item itemvalue="JUnit.UnitTest.lpad" />
-        <item itemvalue="JUnit.UnitTest.issNumeric" />
       </list>
     </recent_temporary>
   </component>
@@ -459,14 +456,15 @@
       <updated>1581733274937</updated>
       <workItem from="1581733277720" duration="47506000" />
       <workItem from="1582418218899" duration="10849000" />
-      <workItem from="1582513338410" duration="1198000" />
+      <workItem from="1582513338410" duration="5178000" />
+      <workItem from="1583374769247" duration="599000" />
+      <workItem from="1583621844657" duration="3594000" />
+      <workItem from="1583972980063" duration="599000" />
+      <workItem from="1584317531933" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AssemblerWithSymbolTest_assembler - 2020.02.16 at 19h 35m 15s.xml">
-      <configuration name="AssemblerWithSymbolTest.assembler" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AssemblerWithSymbolTest_assembler - 2020.02.16 at 19h 35m 38s.xml">
       <configuration name="AssemblerWithSymbolTest.assembler" configurationId="JUnit" />
     </history-entry>
@@ -494,15 +492,17 @@
     <history-entry file="AssemblerWithSymbolTest_assembler - 2020.02.23 at 16h 43m 50s.xml">
       <configuration name="AssemblerWithSymbolTest.assembler" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UnitTest_getResourcePath - 2020.03.08 at 11h 36m 18s.xml">
+      <configuration name="UnitTest.getResourcePath" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59553000" />
+    <option name="totallyTimeSpent" value="68924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18923241" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1977612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -511,8 +511,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4002169" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4002169" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -747,31 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,20 +780,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1406">
-          <caret line="91" column="64" selection-start-line="89" selection-start-column="9" selection-end-line="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63042">
           <caret line="3403" column="77" selection-start-line="3403" selection-start-column="77" selection-end-line="3403" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/AssemblerWithSymbolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="71" selection-start-line="71" selection-end-line="102" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -841,8 +820,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Code.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="1672">
+          <caret line="96" column="93" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -858,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/core/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="1539">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -880,10 +879,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dev/hyein/computer/Assembler/Assembler.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dev/hyein/computer/UnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="364">
+          <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

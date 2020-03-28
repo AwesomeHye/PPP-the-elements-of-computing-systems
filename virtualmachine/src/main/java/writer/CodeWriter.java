@@ -16,12 +16,18 @@ public class CodeWriter {
     private Path templatePath;
     private Path currentTemplatePath;
     private int assemblyLineNum;
+    private String functionName;
     private Map<String, Map<String, String>> asmCommandSymbol;
-
+    private boolean insertedBootstrapCode;
+    private int booleanIndex;
+    private int returnIndex;
     public CodeWriter(){
         try {
             templatePath = Paths.get(getClass().getClassLoader().getResource("sourcefiles/asmTemplate").toURI());
             asmCommandSymbol = new LinkedHashMap<>();
+            functionName = "null";
+            insertedBootstrapCode = false;
+            booleanIndex = 0;
             initAsmCommandSymbol();
         } catch (URISyntaxException e) {
             e.printStackTrace();
@@ -32,13 +38,17 @@ public class CodeWriter {
 
     /**
      * insert and translate parsed command to assembly
-     * @param intermediateCodeComponentsList
+     * @param intermediateCodeComponentsList List<Map<component_option, value>>
      * @return
      */
     public List<String> translateAssemblyCode(List<Map<String, String>> intermediateCodeComponentsList) {
-        List<String> assembly = new ArrayList<>();
+
+       List<String> assembly = new ArrayList<>();
 
         for(Map<String, String> codeComponents: intermediateCodeComponentsList){
+            if(!insertedBootstrapCode && codeComponents.get("filename").equals("Sys")){
+                insertBootstrapCode(assembly);
+            }
             String commandType = codeComponents.get("commandtype");
             switch (CommandType.valueOf(commandType)){
                 case C_ARITHMETIC:
@@ -50,10 +60,73 @@ public class CodeWriter {
                 case C_POP:
                     assembly.addAll(writePushPop("pop", codeComponents));
                     break;
+                case C_LABEL:
+                    assembly.addAll(writeConditionalBranch("label", codeComponents.get("arg1")));
+                    break;
+                case C_IF:
+                    assembly.addAll(writeConditionalBranch("if-goto", codeComponents.get("arg1")));
+                    break;
+                case C_GOTO:
+                    assembly.addAll(writeConditionalBranch("goto", codeComponents.get("arg1")));
+                    break;
+                case C_CALL:
+                    assembly.addAll(writeCallFunction("call", codeComponents));
+                    break;
+                case C_FUNCTION:
+                    assembly.addAll(writeCallFunction("function", codeComponents));
+                    functionName = codeComponents.get("arg1");
+                    break;
+                case C_RETURN:
+                    assembly.addAll(writeReturn());
+                    break;
+                default:
+                    log.error("invalid commandtype: {}", commandType);
+                    throw new RuntimeException();
             }
+
             assemblyLineNum=assembly.stream().filter(line -> !line.startsWith("//")).collect(Collectors.toList()).size();
         }
+
+        insertedBootstrapCode = false;
+        booleanIndex = 0;
+        returnIndex=0;
+        functionName = "null";
         return assembly;
+    }
+
+    /**
+     * if vm file includes "Sys.vm", insert bootstrap code
+     * @param assembly
+     */
+    private void insertBootstrapCode(List<String> assembly) {
+        Path bootstrapCodePath = templatePath.resolve("bootstrap.asm");
+        try {
+            assembly.addAll(Files.readAllLines(bootstrapCodePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        insertedBootstrapCode = true;
+    }
+
+    /**
+     * translate arithmetic command to assembly
+     * @param op add, sub, neg, eq, gt, lt, and, or, not
+     * @return assembly
+     */
+    private List<String> writeArithmetic(String op) {
+        Map<String, String> asmCommandComponents = asmCommandSymbol.get(op);
+
+        //set dynamic components
+        //[eq, gt, lt]
+        if(asmCommandComponents.containsKey("{FUNC_NAME}")) {
+            asmCommandComponents.replace("{FUNC_NAME}", functionName);
+        }
+        if(asmCommandComponents.containsKey("{BOOLEAN_INDEX}")) {
+            asmCommandComponents.replace("{BOOLEAN_INDEX}", String.valueOf(booleanIndex++));
+        }
+
+        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
+        return createAssembly(asmCommandComponents);
     }
 
     /**
@@ -63,16 +136,15 @@ public class CodeWriter {
      * @return assembly
      */
     private List<String> writePushPop(String action, Map<String, String> codeComponents) {
-        List<String> asm = new ArrayList<>();
         String segment = codeComponents.get("arg1");
         String index = codeComponents.get("arg2");
 
         Map<String, String> asmCommandComponents = asmCommandSymbol.get(action + "_" + segment);
-        //set dynamic data
-        //constant
+        //set dynamic components
+        //[constant]
         if(asmCommandComponents.containsKey("{NUM}"))
             asmCommandComponents.replace("{NUM}", index);
-        //pointer
+        //[pointer]
         if(asmCommandComponents.containsKey("{SYM_INDEX}")) {
             if ((index.equals("0"))) {
                 asmCommandComponents.replace("{SYM_INDEX}", "");
@@ -80,20 +152,91 @@ public class CodeWriter {
                 asmCommandComponents.replace("{SYM_INDEX}", "+1");
             }
         }
-        //static
+        //[static]
         if(asmCommandComponents.containsKey("{FILE_NAME}")) {
             asmCommandComponents.replace("{FILE_NAME}", codeComponents.get("filename"));
         }
 
-        //others
+        //[others]
         if(asmCommandComponents.containsKey("{INDEX}")) {
             asmCommandComponents.replace("{INDEX}", index);
         }
 
+        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
+        return createAssembly(asmCommandComponents);
+    }
+
+    /**
+     * translate label, if-goto, goto command to assembly
+     *
+     * @param op label, if-goto, goto
+     * @param label
+     * @return assembly
+     */
+    private List<String> writeConditionalBranch(String op, String label) {
+        Map<String, String> asmCommandComponents = asmCommandSymbol.get(op);
+
+        //set dynamic components
+        if(asmCommandComponents.containsKey("{LABEL}")) {
+            asmCommandComponents.replace("{LABEL}", label);
+        }
+        if(asmCommandComponents.containsKey("{FUNC_NAME}")) {
+            asmCommandComponents.replace("{FUNC_NAME}", functionName);
+        }
+
+        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
+        return createAssembly(asmCommandComponents);
+    }
+
+    /**
+     * translate call, function command to assembly
+     * @param op call, function
+     * @param codeComponents
+     * @return assembly
+     */
+    private List<String> writeCallFunction(String op, Map<String, String> codeComponents) {
+        String functionName = codeComponents.get("arg1");
+        String num = codeComponents.get("arg2"); //call: ARG_NUM, function: LCL_NUM
+
+        Map<String, String> asmCommandComponents = asmCommandSymbol.get(op);
+
+        //set dynamic components
+        if(asmCommandComponents.containsKey("{FUNC_NAME}")) {
+            asmCommandComponents.replace("{FUNC_NAME}", functionName);
+        }
+        if(asmCommandComponents.containsKey("{RET_INDEX}")) {
+            asmCommandComponents.replace("{RET_INDEX}", String.valueOf(returnIndex++));
+        }
+        if(asmCommandComponents.containsKey("{ARG_NUM}")) {
+            asmCommandComponents.replace("{ARG_NUM}", num);
+        } else if(asmCommandComponents.containsKey("{LCL_NUM}")) {
+            asmCommandComponents.replace("{LCL_NUM}", num);
+        }
+
+        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
+        return createAssembly(asmCommandComponents);
+    }
+
+    /**
+     * translate return command to assembly
+     * @return assembly
+     */
+    private List<String> writeReturn() {
+        Map<String, String> asmCommandComponents = asmCommandSymbol.get("return");
+
+        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
+        return createAssembly(asmCommandComponents);
+    }
+
+    /**
+     * create assembly by inserting asmCommandComponents to template file
+     * @param asmCommandComponents
+     * @return assembly
+     */
+    private List<String> createAssembly(Map<String, String> asmCommandComponents) {
+        List<String> asm = new ArrayList<>();
         try {
 
-            //set static data
-            currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
             asm = Files.readAllLines(currentTemplatePath);
 
             String line;
@@ -109,43 +252,9 @@ public class CodeWriter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return asm;
-
-    }
-
-
-    /**
-     * translate arithmetic command to assembly
-     * @param op add, sub, neg, eq, gt, lt, and, or, not
-     * @return assembly
-     */
-    private List<String> writeArithmetic(String op) {
-        Map<String, String> asmCommandComponents = asmCommandSymbol.get(op);
-        currentTemplatePath = templatePath.resolve(asmCommandComponents.get("template"));
-        if(asmCommandComponents.containsKey("{TRUE_LINE}"))
-            asmCommandComponents.replace("{TRUE_LINE}", String.valueOf(assemblyLineNum+17));
-        if(asmCommandComponents.containsKey("{END}"))
-            asmCommandComponents.replace("{END}", String.valueOf(assemblyLineNum+21));
-
-        List<String> asm = new ArrayList<>();
-        try {
-            asm = Files.readAllLines(currentTemplatePath);
-
-            for(String line: asm){
-                for(String key: asmCommandComponents.keySet().stream().filter(key -> !key.equals("template")).collect(Collectors.toList())){
-                    if(line.contains(key))
-                        asm.set(asm.indexOf(line), line.replace(key,asmCommandComponents.get(key)));
-                }
-
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         return asm;
     }
+
 
 
     /**
@@ -186,9 +295,9 @@ public class CodeWriter {
         eqSymbols.put("{op}", "eq");
         eqSymbols.put("{SYM}", "-");
         eqSymbols.put("{CMP_SYM}", "==");
-        eqSymbols.put("{TRUE_LINE}", "{TRUE_LINE}");
         eqSymbols.put("{JUMP}", "JEQ");
-        eqSymbols.put("{END}", "{END}");
+        eqSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        eqSymbols.put("{BOOLEAN_INDEX}", "{BOOLEAN_INDEX}");
         asmCommandSymbol.put("eq", eqSymbols);
 
         HashMap<String, String> gtSymbols = new HashMap<>();
@@ -196,9 +305,9 @@ public class CodeWriter {
         gtSymbols.put("{op}", "gt");
         gtSymbols.put("{SYM}", "-");
         gtSymbols.put("{CMP_SYM}", ">");
-        gtSymbols.put("{TRUE_LINE}", "{TRUE_LINE}");
         gtSymbols.put("{JUMP}", "JGT");
-        gtSymbols.put("{END}", "{END}");
+        gtSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        gtSymbols.put("{BOOLEAN_INDEX}", "{BOOLEAN_INDEX}");
         asmCommandSymbol.put("gt", gtSymbols);
 
         HashMap<String, String> ltSymbols = new HashMap<>();
@@ -206,9 +315,9 @@ public class CodeWriter {
         ltSymbols.put("{op}", "lt");
         ltSymbols.put("{SYM}", "-");
         ltSymbols.put("{CMP_SYM}", "<");
-        ltSymbols.put("{TRUE_LINE}", "{TRUE_LINE}");
         ltSymbols.put("{JUMP}", "JLT");
-        ltSymbols.put("{END}", "{END}");
+        ltSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        ltSymbols.put("{BOOLEAN_INDEX}", "{BOOLEAN_INDEX}");
         asmCommandSymbol.put("lt", ltSymbols);
 
         HashMap<String, String> negSymbols = new HashMap<>();
@@ -324,6 +433,46 @@ public class CodeWriter {
         popStaticSymbols.put("{INDEX}", "{INDEX}");
         asmCommandSymbol.put("pop_static", popStaticSymbols);
 
+        //label
+        HashMap<String, String> labelSymbols = new HashMap<>();
+        labelSymbols.put("template", "label.template");
+        labelSymbols.put("{LABEL}", "{LABEL}");
+        labelSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        asmCommandSymbol.put("label", labelSymbols);
+
+        //if-goto
+        HashMap<String, String> ifGotoSymbols = new HashMap<>();
+        ifGotoSymbols.put("template", "if-goto.template");
+        ifGotoSymbols.put("{LABEL}", "{LABEL}");
+        ifGotoSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        asmCommandSymbol.put("if-goto", ifGotoSymbols);
+
+        //goto
+        HashMap<String, String> gotoSymbols = new HashMap<>();
+        gotoSymbols.put("template", "goto.template");
+        gotoSymbols.put("{LABEL}", "{LABEL}");
+        gotoSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        asmCommandSymbol.put("goto", gotoSymbols);
+
+        //call
+        HashMap<String, String> callSymbols = new HashMap<>();
+        callSymbols.put("template", "call.template");
+        callSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        callSymbols.put("{ARG_NUM}", "{ARG_NUM}");
+        callSymbols.put("{RET_INDEX}", "{RET_INDEX}");
+        asmCommandSymbol.put("call", callSymbols);
+
+        //function
+        HashMap<String, String> functionSymbols = new HashMap<>();
+        functionSymbols.put("template", "function.template");
+        functionSymbols.put("{FUNC_NAME}", "{FUNC_NAME}");
+        functionSymbols.put("{LCL_NUM}", "{LCL_NUM}");
+        asmCommandSymbol.put("function", functionSymbols);
+
+        //return
+        HashMap<String, String> returnSymbols = new HashMap<>();
+        returnSymbols.put("template", "return.template");
+        asmCommandSymbol.put("return", returnSymbols);
     }
 
 }

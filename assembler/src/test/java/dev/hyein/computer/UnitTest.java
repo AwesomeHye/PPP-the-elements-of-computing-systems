@@ -51,7 +51,7 @@ public class UnitTest
     public void getResourcePath() throws IOException, URISyntaxException {
 
         URL url = getClass().getClassLoader().getResource("asm");
-        log.info("url: {}", url);
+        log.info("url: {}", url); // file:/D:/Programming/workspace/JAVA/Local/LECTURE/PPP_COMPUTING_SYSTEM/assembler/target/classes/asm
 
         Files.walk(Paths.get(url.toURI())).filter(path -> path.toFile().isFile()).forEach(path -> {
             try {

@@ -29,27 +29,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D == 0, TRUE. GOTO line+=18
-@31
+//if D == 0, goto null$TRUE_0
+@null$TRUE_0
 D;JEQ
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@35
+@null$END_0
 0;JMP
-//line 31. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_0)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_0)
 //// PUSH CONSTANT 17 ////
 //set 17
 @17
@@ -81,27 +80,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D == 0, TRUE. GOTO line+=18
-@66
+//if D == 0, goto null$TRUE_1
+@null$TRUE_1
 D;JEQ
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@70
+@null$END_1
 0;JMP
-//line 66. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_1)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_1)
 //// PUSH CONSTANT 16 ////
 //set 16
 @16
@@ -133,27 +131,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D == 0, TRUE. GOTO line+=18
-@101
+//if D == 0, goto null$TRUE_2
+@null$TRUE_2
 D;JEQ
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@105
+@null$END_2
 0;JMP
-//line 101. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_2)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_2)
 //// PUSH CONSTANT 892 ////
 //set 892
 @892
@@ -185,27 +182,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D < 0, TRUE. GOTO line+=18
-@136
+//if D < 0, goto null$TRUE_3
+@null$TRUE_3
 D;JLT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@140
+@null$END_3
 0;JMP
-//line 136. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_3)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_3)
 //// PUSH CONSTANT 891 ////
 //set 891
 @891
@@ -237,27 +233,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D < 0, TRUE. GOTO line+=18
-@171
+//if D < 0, goto null$TRUE_4
+@null$TRUE_4
 D;JLT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@175
+@null$END_4
 0;JMP
-//line 171. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_4)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_4)
 //// PUSH CONSTANT 891 ////
 //set 891
 @891
@@ -289,27 +284,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D < 0, TRUE. GOTO line+=18
-@206
+//if D < 0, goto null$TRUE_5
+@null$TRUE_5
 D;JLT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@210
+@null$END_5
 0;JMP
-//line 206. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_5)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_5)
 //// PUSH CONSTANT 32767 ////
 //set 32767
 @32767
@@ -341,27 +335,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D > 0, TRUE. GOTO line+=18
-@241
+//if D > 0, goto null$TRUE_6
+@null$TRUE_6
 D;JGT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@245
+@null$END_6
 0;JMP
-//line 241. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_6)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_6)
 //// PUSH CONSTANT 32766 ////
 //set 32766
 @32766
@@ -393,27 +386,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D > 0, TRUE. GOTO line+=18
-@276
+//if D > 0, goto null$TRUE_7
+@null$TRUE_7
 D;JGT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@280
+@null$END_7
 0;JMP
-//line 276. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_7)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_7)
 //// PUSH CONSTANT 32766 ////
 //set 32766
 @32766
@@ -445,27 +437,26 @@ M=M-1
 @SP
 A=M-1
 D=M-D
-//if D > 0, TRUE. GOTO line+=18
-@311
+//if D > 0, goto null$TRUE_8
+@null$TRUE_8
 D;JGT
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@315
+@null$END_8
 0;JMP
-//line 311. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+(null$TRUE_8)
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+(null$END_8)
 //// PUSH CONSTANT 57 ////
 //set 57
 @57

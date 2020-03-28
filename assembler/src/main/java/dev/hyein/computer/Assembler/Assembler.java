@@ -21,7 +21,6 @@ public class Assembler extends CoreAssembler {
         List<Map<String, String>> parsedAssembly = super.getParser().parse(assembly);
         generateSymbolTable(parsedAssembly);
 
-
         Iterator<Map<String, String>> iterator = parsedAssembly.iterator();
         while(iterator.hasNext()){
             Map<String, String> parsedCommand = iterator.next();

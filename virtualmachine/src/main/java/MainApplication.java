@@ -9,10 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Slf4j
@@ -28,22 +25,26 @@ public class MainApplication {
 
       log.info("source path: {}\n", sourcePath);
 
-      AtomicReference<Map<String, List<String>>> intermediateCode = new AtomicReference<>(new HashMap<>());
+      //Map<directoryName(for static), Map<fileName, fileContent>>
+      AtomicReference<Map<String, Map<String, List<String>>>> intermediateFileWithDirectory = new AtomicReference<>(new HashMap<>());
+      //Map<fileName, fileContent>
+      AtomicReference<Map<String, List<String>>> intermediateFile= new AtomicReference<>(new LinkedHashMap<>());
       AtomicReference<Path> targetFilePath = new AtomicReference<>();
       AtomicReference<List<String>> assembly = new AtomicReference<>(new ArrayList<>());
 
+      // each directory
       Files.walk(sourcePath).filter(path -> path.toFile().isDirectory()).forEach(parentPath -> {
+         Map<String, List<String>> tmpFile= new HashMap<>();
 
 
          //get Intermediate Code
          try {
             Files.list(parentPath).filter(filePath -> filePath.toString().endsWith(".vm")).forEach(filePath -> {
-               String fileName = parentPath.getFileName().toString();
-               log.info("======================== STARTED ========================");
+               String fileName = filePath.getFileName().toString();
                log.info("INPUT: {}", filePath.toString());
-
                try {
-                  intermediateCode.get().put(fileName, Files.readAllLines(filePath));
+                  tmpFile.put(fileName, Files.readAllLines(filePath));
+//                  intermediateFile.get().put(fileName, Files.readAllLines(filePath));
                } catch (IOException e) {
                   e.printStackTrace();
                }
@@ -52,10 +53,23 @@ public class MainApplication {
 
 
             //if Intermediate Code is exist
-            if( !intermediateCode.get().isEmpty() ) {
+            if( !tmpFile.isEmpty() ) {
+               //if Sys.vm is exist, put first
+               tmpFile.keySet().stream().sorted((a, b) -> {
+                  if(a.equals("Sys.vm"))
+                     return -1;
+                  else
+                     return 0;
+               }).forEach(f -> {
+                  intermediateFile.get().put(f, tmpFile.get(f));
+               });
+
+
+               String directoryName = parentPath.getFileName().toString();
+               intermediateFileWithDirectory.get().put(directoryName, intermediateFile.get());
 
                //translate Intermediate Code to Assembly
-               assembly.get().addAll(vmTranslator.translate(intermediateCode.get()));
+               assembly.get().addAll(vmTranslator.translate(intermediateFileWithDirectory.get()));
 
                //write Assembly to Target Path
                targetFilePath.set(parentPath.resolve(parentPath.getFileName().toString().concat(".asm")));
@@ -66,11 +80,12 @@ public class MainApplication {
 
                //post processing
                assembly.get().clear();
-               intermediateCode.get().clear();
+               intermediateFileWithDirectory.get().clear();
+               intermediateFile.get().clear();
 
                log.info("OUTPUT: {}", targetFilePath.toString());
-               log.info("======================== FINISHED ========================\n", parentPath);
-            }
+               log.info("==================================================================================================================================\n", parentPath);
+         }
          } catch (IOException e) {
             e.printStackTrace();
          }

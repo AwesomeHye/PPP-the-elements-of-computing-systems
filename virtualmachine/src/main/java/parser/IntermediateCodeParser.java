@@ -16,35 +16,38 @@ public class IntermediateCodeParser {
 
     /**
      * parse vm codes and set components
-     * @param intermediateCodes Map<fileName, vm_codes> intermediateCode
+     * @param intermediateCodes Map<directoryName, Map<fileName, vm_codes>> intermediateCode
      * @return parsed components(commandtype, arg1, arg2, filename(for static variable)) by line
      */
-    public List<Map<String, String>> parse(Map<String, List<String>> intermediateCodes) {
+    public List<Map<String, String>> parse(Map<String, Map<String, List<String>>> intermediateCodes) {
         parsedVMCommand = new ArrayList<>();
 
-        for(String fileName: intermediateCodes.keySet()) {
-            //refine vm file content
-            List<String> refinedIntermediateCode = refineIntermediateCode(intermediateCodes.get(fileName));
-            intermediateCodeIterator = refinedIntermediateCode.iterator();
+        for(String directoryName: intermediateCodes.keySet()) {
+            for (String fileName : intermediateCodes.get(directoryName).keySet()) {
+                //refine vm file content
+                List<String> refinedIntermediateCode = refineIntermediateCode(intermediateCodes.get(directoryName).get(fileName));
+                intermediateCodeIterator = refinedIntermediateCode.iterator();
 
-            //parse line by line
-            CommandType commandType;
-            while (hasMoreCommands()) {
-                advance();
+                //parse line by line
+                CommandType commandType;
+                while (hasMoreCommands()) {
+                    advance();
 
-                parsedCurrentCommand = new LinkedHashMap<>();
-                parsedCurrentCommand.put("filename", fileName);
+                    parsedCurrentCommand = new LinkedHashMap<>();
+                    parsedCurrentCommand.put("directoryname", directoryName);
+                    parsedCurrentCommand.put("filename", fileName.split("\\.")[0]);
 
-                commandType = getCommandType();
-                parsedCurrentCommand.put("commandtype", commandType.name());
+                    commandType = getCommandType();
+                    parsedCurrentCommand.put("commandtype", commandType.name());
 
-                if (commandType != CommandType.C_RETURN)
-                    parsedCurrentCommand.put("arg1", getArg1(commandType));
+                    if (commandType != CommandType.C_RETURN)
+                        parsedCurrentCommand.put("arg1", getArg1(commandType));
 
-                if (commandType == CommandType.C_PUSH || commandType == CommandType.C_POP || commandType == CommandType.C_FUNCTION || commandType == CommandType.C_CALL)
-                    parsedCurrentCommand.put("arg2", String.valueOf(getArg2(commandType)));
+                    if (commandType == CommandType.C_PUSH || commandType == CommandType.C_POP || commandType == CommandType.C_FUNCTION || commandType == CommandType.C_CALL)
+                        parsedCurrentCommand.put("arg2", String.valueOf(getArg2(commandType)));
 
-                parsedVMCommand.add(parsedCurrentCommand);
+                    parsedVMCommand.add(parsedCurrentCommand);
+                }
             }
         }
 
@@ -84,7 +87,18 @@ public class IntermediateCodeParser {
                 return CommandType.C_PUSH;
             case "pop":
                 return CommandType.C_POP;
-
+            case "label":
+                return CommandType.C_LABEL;
+            case "goto":
+                return CommandType.C_GOTO;
+            case "if-goto":
+                return CommandType.C_IF;
+            case "function":
+                return CommandType.C_FUNCTION;
+            case "return":
+                return CommandType.C_RETURN;
+            case "call":
+                return CommandType.C_CALL;
             default:
                 log.error("invalid command type: {}", command);
                 throw new RuntimeException();
@@ -97,6 +111,11 @@ public class IntermediateCodeParser {
                 return currentCommand.split(" ")[0];
             case C_PUSH:
             case C_POP:
+            case C_FUNCTION:
+            case C_CALL:
+            case C_LABEL:
+            case C_GOTO:
+            case C_IF:
                 return currentCommand.split(" ")[1];
 
             default:
@@ -105,7 +124,7 @@ public class IntermediateCodeParser {
     }
 
     private Integer getArg2(CommandType commandType) {
-        String value = currentCommand.split(" ")[2];
+        String value = currentCommand.split(" ")[2].trim();
         if (StringUtils.isNotEmpty(value))
             return Integer.valueOf(value);
         else {

@@ -9,24 +9,23 @@ M=M-1
 @SP
 A=M-1
 D=M{SYM}D
-//if D {CMP_SYM} 0, TRUE. GOTO line+=18
-@{TRUE_LINE}
+//if D {CMP_SYM} 0, goto {FUNC_NAME}$TRUE_{BOOLEAN_INDEX}
+@{FUNC_NAME}$TRUE_{BOOLEAN_INDEX}
 D;{JUMP}
-//FALSE 
-//set 0
+//FALSE, set 0
 @0
 D=A
 //update 0
 @SP
 A=M-1
 M=D
-//GOTO line+=23
-@{END}
+@{FUNC_NAME}$END_{BOOLEAN_INDEX}
 0;JMP
-//line {TRUE_LINE}. TRUE
-//set -1(0xFFFF)
+//TRUE, set -1(0xFFFF)
+({FUNC_NAME}$TRUE_{BOOLEAN_INDEX})
 D=-1
 //update -1
 @SP
 A=M-1
 M=D
+({FUNC_NAME}$END_{BOOLEAN_INDEX})

@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import parser.IntermediateCodeParser;
 import writer.CodeWriter;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
@@ -19,12 +21,13 @@ public class VmTranslator {
 
     /**
      * VM ROLE: translate intermediate code to hack assembly
-     * @param intermediateCode Map<fileName, contents> intermediateCode
-     * @return assemly
+     * @param intermediateCode Map<directoryName, Map<fileName, contents>> intermediateCode
+     * @return List<Map<component_option, value>>
      */
-    public List<String> translate(Map<String, List<String>> intermediateCode) {
+    public List<String> translate(Map<String, Map<String, List<String>>> intermediateCode) {
         List<Map<String, String>> intermediateCodeComponents = intermediateCodeParser.parse(intermediateCode);
 
         return codeWriter.translateAssemblyCode(intermediateCodeComponents);
     }
+
 }

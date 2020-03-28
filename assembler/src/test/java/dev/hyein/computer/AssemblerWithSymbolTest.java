@@ -69,6 +69,11 @@ public class AssemblerWithSymbolTest {
         log.info("====================================================================================================");
     }
 
+    /**
+     * read file from @param path and write hack file (binary code)
+     * @param coreAssembler
+     * @param path assembly file path
+     */
     private void writeHackFiles(CoreAssembler coreAssembler, Path path) {
         AtomicReference<List<String>> assembly = new AtomicReference<>(Collections.emptyList());
         AtomicReference<List<String>> binaryCode = new AtomicReference<>(Collections.emptyList());
